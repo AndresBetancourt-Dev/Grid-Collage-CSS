@@ -7,3 +7,8 @@
     font-family: 'Precious';
     src: url('../fonts/Precious.ttf');
 }
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto.ttf');
+}

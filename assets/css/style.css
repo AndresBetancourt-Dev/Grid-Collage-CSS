@@ -21,21 +21,29 @@ body{
     width: 100%;
     height: 100%;
     min-height: 189px;
+    position: relative;
+    overflow: hidden;
 }
 .presentation{
     grid-area: presentation;
     box-shadow: 3px 3px 15px rgba(0,0,0,.5);
-    position: relative;
 }
 .presentation__title{
     position: absolute;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.6vw;
     top: 1%;
     font-family: 'Precious',sans-serif;
     color: rgba(0,0,0,.65);
     right: 25%;
     left: 25%;
+}
+.presentation__footer{
+    position: absolute;
+    bottom: 0px;
+    font-size: 1vw;
+    font-family: 'Roboto',sans-serif;
+    right: 10px;
 }
 .marina-bay{
     grid-area: marina-bay;
@@ -61,13 +69,41 @@ body{
 .grid-item img{
     width: 100%;
     height: 100%;
+    position: relative;
 }
-@media screen and (max-width: 600px){
+.grid-hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+}
+.grid-item:hover .grid-hover{
+    left: 0;
+    transition: 2s;
+    background: rgba(0,0,0,.5);
+}
+
+@media screen and (min-width: 1550px){
+    .presentation__title{
+        font-size: 40px
+    }
+    .presentation__footer{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px){
     .grid{
         display: flex;
         flex-wrap: wrap;
     }
     .presentation__title{
-        font-size: 7vw;
+        font-size: 5.8vw;
+    }
+    .presentation__footer{
+        font-size: 3vw;
     }
 }
